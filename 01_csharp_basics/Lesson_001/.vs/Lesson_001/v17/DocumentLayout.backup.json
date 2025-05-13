@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "G:\\QuocAn\\Learning\\Lesson_001\\",
+  "WorkspaceRootPath": "G:\\QuocAn\\Learning\\csharp-dotnet-labs\\01_csharp_basics\\Lesson_001\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DE334325-2B0C-406E-BD7F-E6F11B085AEC}|Print_The_Multiplication_Table\\Print_The_Multiplication_Table.csproj|g:\\quocan\\learning\\lesson_001\\print_the_multiplication_table\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE334325-2B0C-406E-BD7F-E6F11B085AEC}|Print_The_Multiplication_Table\\Print_The_Multiplication_Table.csproj|solutionrelative:print_the_multiplication_table\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91136F4A-D2C4-45C7-90A8-0FD46C243A58}|Calculate_BMI\\Calculate_BMI.csproj|g:\\quocan\\learning\\csharp-dotnet-labs\\01_csharp_basics\\lesson_001\\calculate_bmi\\bmicalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91136F4A-D2C4-45C7-90A8-0FD46C243A58}|Calculate_BMI\\Calculate_BMI.csproj|solutionrelative:calculate_bmi\\bmicalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91136F4A-D2C4-45C7-90A8-0FD46C243A58}|Calculate_BMI\\Calculate_BMI.csproj|g:\\quocan\\learning\\lesson_001\\calculate_bmi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91136F4A-D2C4-45C7-90A8-0FD46C243A58}|Calculate_BMI\\Calculate_BMI.csproj|solutionrelative:calculate_bmi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DE334325-2B0C-406E-BD7F-E6F11B085AEC}|Print_The_Multiplication_Table\\Print_The_Multiplication_Table.csproj|g:\\quocan\\learning\\csharp-dotnet-labs\\01_csharp_basics\\lesson_001\\print_the_multiplication_table\\multiplicationtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE334325-2B0C-406E-BD7F-E6F11B085AEC}|Print_The_Multiplication_Table\\Print_The_Multiplication_Table.csproj|solutionrelative:print_the_multiplication_table\\multiplicationtable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,16 +18,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\QuocAn\\Learning\\Lesson_001\\Print_The_Multiplication_Table\\Program.cs",
-              "RelativeDocumentMoniker": "Print_The_Multiplication_Table\\Program.cs",
-              "ToolTip": "G:\\QuocAn\\Learning\\Lesson_001\\Print_The_Multiplication_Table\\Program.cs",
-              "RelativeToolTip": "Print_The_Multiplication_Table\\Program.cs",
+              "DocumentIndex": 1,
+              "Title": "MultiplicationTable.cs",
+              "DocumentMoniker": "G:\\QuocAn\\Learning\\csharp-dotnet-labs\\01_csharp_basics\\Lesson_001\\Print_The_Multiplication_Table\\MultiplicationTable.cs",
+              "RelativeDocumentMoniker": "Print_The_Multiplication_Table\\MultiplicationTable.cs",
+              "ToolTip": "G:\\QuocAn\\Learning\\csharp-dotnet-labs\\01_csharp_basics\\Lesson_001\\Print_The_Multiplication_Table\\MultiplicationTable.cs",
+              "RelativeToolTip": "Print_The_Multiplication_Table\\MultiplicationTable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-10T10:16:39.5Z",
@@ -35,12 +35,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "G:\\QuocAn\\Learning\\Lesson_001\\Calculate_BMI\\Program.cs",
-              "RelativeDocumentMoniker": "Calculate_BMI\\Program.cs",
-              "ToolTip": "G:\\QuocAn\\Learning\\Lesson_001\\Calculate_BMI\\Program.cs",
-              "RelativeToolTip": "Calculate_BMI\\Program.cs",
+              "DocumentIndex": 0,
+              "Title": "BMICalculator.cs",
+              "DocumentMoniker": "G:\\QuocAn\\Learning\\csharp-dotnet-labs\\01_csharp_basics\\Lesson_001\\Calculate_BMI\\BMICalculator.cs",
+              "RelativeDocumentMoniker": "Calculate_BMI\\BMICalculator.cs",
+              "ToolTip": "G:\\QuocAn\\Learning\\csharp-dotnet-labs\\01_csharp_basics\\Lesson_001\\Calculate_BMI\\BMICalculator.cs",
+              "RelativeToolTip": "Calculate_BMI\\BMICalculator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-08T15:01:05.5Z",
