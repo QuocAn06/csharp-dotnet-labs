@@ -1,0 +1,49 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# DotCover
+*.dotCover
+
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of PackageReference in .csproj
+packages/
+# Uncomment if using legacy package.config
+#packages/*
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+
+# Visual Studio temporary files
+*.tmp
+*.bak
+*.cache
+*.log
+*.vspscc
+*.vssscc
+
+# Others
+*.dbmdl
+*.jfm
+_ReSharper*/
+*.resharper
+*.sln.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
