@@ -1,49 +1,39 @@
-# Build results
-bin/
-obj/
+## .gitignore cho C#/.NET ##
 
-# User-specific files
+# Build results
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
 *.user
 *.suo
+*.userprefs
 *.userosscache
-*.sln.docstates
 
-# Rider
-.idea/
-
-# Visual Studio Code
-.vscode/
-
-# DotCover
-*.dotCover
-
-# NuGet packages
-*.nupkg
-# The packages folder can be ignored because of PackageReference in .csproj
-packages/
-# Uncomment if using legacy package.config
-#packages/*
-
-# Visual Studio profiler
-*.psess
-*.vsp
-*.vspx
-
-# Visual Studio temporary files
-*.tmp
-*.bak
-*.cache
-*.log
-*.vspscc
-*.vssscc
-
-# Others
-*.dbmdl
-*.jfm
+# ReSharper
 _ReSharper*/
 *.resharper
-*.sln.iml
 
-# OS generated files
+# NuGet
+[Nn]u[Gg]et/[Ll]ocal/
+*.nupkg
+packages/
+
+# MSTest
+*.TestResult.xml
+TestResults/
+
+# macOS
 .DS_Store
-Thumbs.db
+
+# Rider IDE
+.idea/
+
+# Local development
+appsettings.Development.json
+
+# Ignore local launch settings
+Properties/launchSettings.json
