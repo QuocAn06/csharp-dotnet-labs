@@ -1,0 +1,14 @@
+﻿[
+  {
+    "ID": "S001",
+    "Name": "Nguyen Van A",
+    "Age": 18,
+    "GPA": 3.5
+  },
+  {
+    "ID": "S002",
+    "Name": "Tran Thi B",
+    "Age": 19,
+    "GPA": 3.8
+  }
+]
