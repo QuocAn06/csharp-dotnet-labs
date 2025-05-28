@@ -9,66 +9,61 @@ namespace StudentManagementLab
 {
     public class StudentManager
     {
-        private List<Student> students;
+        private List<Student> studentList = new List<Student>();
 
-        //Constructor
-        public StudentManager() 
+        public void AddStudent()
         {
-            students = new List<Student>(); //Khởi tạo danh sách
-            LoadFromFile(); //Tự động load dữ liệu
-        }
+            Console.WriteLine("\nADD NEW STUDENT");
 
-        //Add new student
-        public void AddStudent(Student student)
-        {
-            students.Add(student);
-            Console.WriteLine("Student added successfully!");
-        }
+            Console.Write("_ Enter Student ID: ");
+            string studentID = Console.ReadLine();
 
-        //Display all students
-        public void DisplayAllStudents()
-        {
-            Console.WriteLine("\nList of Student: ");
-            foreach (var student in students)
+            Console.Write("_ Enter Full Name: ");
+            string studentName = Console.ReadLine();
+
+            int age;
+            while (true) 
             {
-                student.DisplayInfo();
+                Console.Write("_ Enter Age (>=0): ");
+                if (int.TryParse(Console.ReadLine(), out age) && age >=0)
+                    break;
+                Console.WriteLine("Invalid Age. Please enter a non-negative number.");
+            }
+
+            double gpa;
+            while (true) 
+            {
+                Console.Write("_ Enter GPA (0.0 - 4.0): ");
+                if(double.TryParse(Console.ReadLine(), out gpa) && gpa >=0 && gpa <= 4)
+                    break;
+                Console.WriteLine("Invalid GPA. Please enter a number between 0.0 and 4.0.");
+            }
+
+            Student newStudent = new Student 
+            {
+                ID = studentID,
+                Name = studentName,
+                Age = age,
+                GPA = gpa
+            };
+
+            studentList.Add(newStudent);
+
+            Console.WriteLine("Student added successfully.\n");
+
+        }
+
+        public void ShowAllStudents()
+        {
+            foreach (var studentInfo in studentList)
+            {
+                studentInfo.DisplayInfo();
             }
         }
 
-        //Calculate average GPA
-        public double CalulateAverageGPA()
+        public double CalculateAverageGPA()
         {
-            if (students.Count == 0)
-                return 0;
-
-            double totalGPA = 0;
-            foreach (var student in students)
-            {
-                totalGPA += student.GPA;
-            }
-            return totalGPA / students.Count;
-        }
-
-        public void SaveToFile(string filePath)
-        {
-            string json = JsonConvert.SerializeObject(students, Formatting.Indented);
-            File.WriteAllText(filePath, json);
-        }
-
-        public void LoadFromFile(string filePath = "students.json")
-        {
-            try
-            {
-                if (File.Exists(filePath))
-                {
-                    string json = File.ReadAllText(filePath);
-                    students = JsonConvert.DeserializeObject<List<Student>>(json);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error loading file: {ex.Message}");
-            }
+            return studentList.Average(s => s.GPA);
         }
     }
 }
