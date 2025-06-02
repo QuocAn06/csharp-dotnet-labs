@@ -1,4 +1,6 @@
 ﻿using EmployeeSystem;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Diagnostics.Metrics;
 
 class Program
 {
@@ -29,7 +31,7 @@ class Program
                 case "3":
                     CalculateDepartmentSalaries();
                     break;
-                case "4":
+                case "0":
                     return;
                 default:
                     Console.WriteLine("Lựa chọn không hợp lệ!");
@@ -69,18 +71,53 @@ class Program
         }
 
         Console.Write("_ Enter ID: ");
-        emp.ID = int.Parse(Console.ReadLine());
+        emp.ID = Console.ReadLine();
 
         Console.Write("_ Enter Name: ");
         emp.Name = Console.ReadLine();
 
-        Console.Write("_ Enter Salary: ");
-        emp.Salary = double.Parse(Console.ReadLine());
+        double empSalary = 0;
+        while (true) 
+        {
+            Console.Write("_ Enter Salary (>0): ");
+            if (double.TryParse(Console.ReadLine(), out empSalary) && empSalary > 0)
+                break;
+            Console.WriteLine("Invalid Salary. Please enter a non - negative number.");
+        }
+        emp.Salary = empSalary;
+
+
+        Console.Write("_ Enter Department: ");
+        emp.Department = Console.ReadLine();
 
         employees.Add(emp);
         Console.WriteLine("Employee added successfully!");
     }
 
+    static void ShowAllWork()
+    {
+        Console.WriteLine("\n=== DANH SACH CONG VIEC ===");
+        foreach (var emp in employees)
+        {
+            emp.Work();
+        }
+    }
 
+    static void CalculateDepartmentSalaries()
+    {
+        Console.WriteLine("\n=== THONG KE LUONG ===");
+
+        var result = employees.GroupBy(e => e.Department)
+                              .Select(g => new {
+                                  Department = g.Key,
+                                  TotalSalary = g.Sum(e => e.Salary),
+                                  Count = g.Count()
+                              });
+
+        foreach (var item in result)
+        {
+            Console.WriteLine($"{item.Department}: {item.Count} employees, Total salary: {item.TotalSalary:N0} VND");
+        }
+    }
 
 }

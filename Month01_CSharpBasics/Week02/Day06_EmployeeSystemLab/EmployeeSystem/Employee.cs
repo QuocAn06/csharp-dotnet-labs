@@ -9,7 +9,7 @@ namespace EmployeeSystem
     // Lớp cha trừu tượng
     public abstract class Employee
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Name { get; set; }
         public double Salary { get; set; }
         public string Department { get; set; } // Thêm phòng ban
