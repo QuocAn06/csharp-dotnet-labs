@@ -1,32 +1,31 @@
-﻿using PaymentSystem.Core.Processors;
+﻿using System;
+using MultiPaymentSystem.Payments;
+using MultiPaymentSystem.Helpers;
 
-namespace PaymentSystem
+
+namespace MultiPaymentSystem
 {
     class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
-            var processor = new PaymentProcessor();
-            //var payments = InitializePayments();
+            Console.Write("Nhập số tiền: ");
+            double amount = Convert.ToDouble(Console.ReadLine());
 
-            while (true) {
-                DisplayMenu();
+            Console.WriteLine("Chọn phương thức thanh toán:");
+            Console.WriteLine("1. Momo\n2. ZaloPay\n3. Cash\n4. Bank Transfer");
+
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            Payment payment = PaymentFactory.GetPaymentMethod(choice);
+
+            if (payment == null)
+            {
+                Console.WriteLine("Lựa chọn không hợp lệ.");
+                return;
             }
+
+            payment.Pay(amount);
         }
-
-        static void DisplayMenu()
-        {
-            Console.Clear();
-            Console.WriteLine("=== PAYMENT SYSTEM ===");
-            Console.WriteLine("1. Momo Payment");
-            Console.WriteLine("2. ZaloPay Payment");
-            Console.WriteLine("3. VNPAY Payment");
-            Console.WriteLine("4. Cash Payment");
-            Console.WriteLine("5. Bank Transfer");
-            Console.WriteLine("0. Exit");
-            Console.Write("Select (0 - 5): ");
-        }
-
-
     }
 }
