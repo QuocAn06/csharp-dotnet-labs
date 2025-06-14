@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PaymentSystem.Core.Abstracts
+namespace MultiPaymentSystem.Payments
 {
     public abstract class Payment
     {
         public abstract void Pay(double amount);
-        public string TransactionId { get; } = Guid.NewGuid().ToString();
     }
 }
