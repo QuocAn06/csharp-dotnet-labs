@@ -23,11 +23,37 @@ namespace ProductFiltering.Services
         }
 
         // 2. Gom nhóm theo loại và đếm số lượng
+        public static void GroupAndCountByCategory(List<Product> products)
+        {
+            var grouped = products.GroupBy(p => p.Category)
+                                  .Select(g => new { Category = g.Key, Count = g.Count() });
+
+            Console.WriteLine("\n--- Number Of Products By Category ---");
+            foreach (var item in grouped)
+            {
+                Console.WriteLine($"{item.Category}: {item.Count} product(s)");
+            }
+        }
 
         // 3. Tính tổng tiền hàng còn tồn kho
+        public static decimal CalculateTotalInventoryValue(List<Product> products) 
+        {
+            var finalResult = products.Sum(p => p.Price * p.InStock);
+
+            return finalResult;
+        }
 
         // 4. Liệt kê Top 3 sản phẩm có giá cao nhất
+        public static void ShowTopThreeMostExpensive(List<Product> products)
+        {
+            var top3 = products.OrderByDescending(p => p.Price)
+                               .Take(3);
 
-
+            Console.WriteLine("--- Top 3 Highest-Priced Products ---");
+            foreach (var p in top3)
+            {
+                Console.WriteLine($"{p.Name} - {p.Category} - {p.Price:#,##0} VND");                
+            }
+        }
     }
 }
