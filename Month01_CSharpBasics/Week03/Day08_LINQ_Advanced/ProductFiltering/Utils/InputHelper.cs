@@ -10,9 +10,19 @@ namespace ProductFiltering.Utils
     {
         public static string ReadString(string prompt)
         {
-            Console.WriteLine(prompt);
-            string inputValue = Console.ReadLine();
+            string? inputValue;
+            do
+            {
+                Console.Write(prompt);
+                inputValue = Console.ReadLine();
 
+                if (string.IsNullOrWhiteSpace(inputValue))
+                {
+                    Console.WriteLine("This field is required. Please enter a value.");
+                }
+
+            } while (string.IsNullOrWhiteSpace(inputValue));
+            
             return inputValue;
         }
 
